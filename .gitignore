@@ -1,0 +1,8 @@
+# Acervo de referência (slides do @growithalex): material com direitos autorais de terceiros. Fica só local.
+assets/exemplos/*
+!assets/exemplos/aprovado/
+# lixo
+.DS_Store
+__pycache__/
+node_modules/
+build/

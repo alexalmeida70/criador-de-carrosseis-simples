@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>slide NN · [posição]</title>
+<link rel="stylesheet" href="../kit/kit.css">
+<link rel="stylesheet" href="../kit/fontes.css">
+<link rel="stylesheet" href="../kit/marca.css">
+<script src="../kit/kit.js"></script>
+<script src="../kit/anim.js"></script>
+<!-- dispositivos, só os que o slide usa: -->
+<!-- <script src="../kit/dispositivos/mesma-capa.js"></script> -->
+<!-- <script src="../kit/dispositivos/layout-slide.js"></script> -->
+<style>
+  /* estilos só deste slide */
+</style>
+</head><body><div id="quadro"></div>
+<script>
+// Slide NN · [posição] · [dispositivo] · [duração] s. Estático: monte o quadro 0. Vivo: seek(t) move e volta ao repouso.
+const K = KIT, A = KIT.A;
+K.marca({ handle: '@handle', rodapeDir: 'criador · fala ia' });
+KIT.pronto(() => {
+  const q = document.getElementById('quadro');
+  K.fundoPapel(q);                                  // ou K.fundoMarinho(q) · ou q.className = 'foto' + camadas
+  const P = (window.__pecas = {});
+  P.titulo = K.el(q, 'div', 'abs sans', 'palavra', { color: K.cor('tinta') });
+  K.place(P.titulo, { x: 72, base: 420, fs: 220 }); K.fit(P.titulo, 936);
+  K.rodape(q, K.cor('tinta'));
+  // vivo: window.seek = (t) => { ... A.carimbo(t, 1.0) ... };
+  K.slide({ index: 1, duration: 6, cues: [/* { t: 1.0, tipo: 'impacto', o_que: 'título carimba' } */] });
+});
+</script></body></html>

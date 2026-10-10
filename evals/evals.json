@@ -1,0 +1,88 @@
+{
+ "skill_name": "criador-de-carrosseis-simples",
+ "evals": [
+  {
+   "id": 1,
+   "prompt": "Quero um carrossel pro Instagram da minha conta Fala IA sobre 'os 5 erros de quem começa a usar o Claude Code' (contexto: ensino criação de conteúdo com Claude Code e IA, público iniciante, PT-BR). Quero que as pessoas salvem e comentem. Pode seguir o padrão do Alex. Me entrega o BRIEF com a estrutura, a copy de todos os slides, a legenda e os PNGs dos slides renderizados em código, sem gerar imagem no Higgsfield (faz a capa tipográfica).",
+   "expected_output": "Pasta do projeto com BRIEF.md (estratégia com arquétipo escolhido pelo resultado, frase única, estrutura em 6 posições com teste de ordem, variações com motivo), copy slide a slide em PT-BR seguindo as fórmulas do padrão-base (capa 2-4 palavras + rodapé em trio, slide 2 que paga a capa e abre o mapa, slides de regra com nome/definição/par/fecho, virada, CTA 'comenta PALAVRA' com entregável de 2-3 partes), legenda em 6 blocos, slides em HTML+JS renderizados a PNG 1080x1350 com folha.png e miniatura.png, tabela de notas da crítica.",
+   "files": [],
+   "assertions": [
+    "BRIEF.md existe e nomeia o arquétipo escolhido e o resultado desejado (save/comentário)",
+    "BRIEF.md traz a frase única que o carrossel defende",
+    "A estrutura marca a posição de cada slide (open, hold, spine, turn, payoff) e registra o teste de ordem",
+    "A capa tem título de 2 a 4 palavras e rodapé em trio (três fragmentos curtos)",
+    "O slide 2 repete a palavra-chave da capa e abre o mapa das partes",
+    "Cada slide de regra tem nome de uma palavra, definição curta e uma frase de fecho",
+    "Existe um slide de virada (só frase) antes do CTA",
+    "O CTA usa 'comenta PALAVRA' com entregável de 2 ou 3 partes e não usa 'segue pra mais'",
+    "legenda.txt tem entre 120 e 250 palavras, zero hashtags, no máximo 1 emoji e zero ponto de interrogação",
+    "Mediana de palavras por frase na legenda é 10 ou menos",
+    "Nenhuma palavra de hype (incrível, insano, secreto, definitivo, revolucionário) nos slides nem na legenda",
+    "Todos os slides foram renderizados em resultados/estatico/slide-NN.png a 1080x1350",
+    "folha.png, miniatura.png e preview.html existem",
+    "RELATORIO.md tem tabela de notas com pelo menos duas rodadas de crítica",
+    "O código dos slides usa no máximo duas famílias de fonte e nenhum texto em degradê ou glow"
+   ]
+  },
+  {
+   "id": 2,
+   "prompt": "Faz um carrossel pra uma clínica de dermatologia (marca 'Derma Lumen', tom calmo e premium, cores verde-escuro #1F3A2E e creme #F3EEE4, fonte Cormorant pro título e Inter pro corpo, sem rosto) sobre 'por que o protetor solar não está funcionando pra você'. O objetivo é confiança e DMs. Em português. Só o BRIEF com estrutura, copy e legenda por enquanto, sem renderizar.",
+   "expected_output": "BRIEF.md com arquétipo Formula ou Teardown justificado, variações do padrão-base registradas com motivo (tom premium: sem 'rouba meu', sem caps gigante, CTA mais contido), copy em 8-10 slides com par de negação adaptado, elenco sem rosto (objeto na cena), paleta e fontes da marca respeitadas (uma alta, uma quieta), legenda em 6 blocos sem hashtag, portões de copy marcados.",
+   "files": [],
+   "assertions": [
+    "MARCA.md preenchido com as cores #1F3A2E e #F3EEE4 e as fontes Cormorant (alta) e Inter (quieta)",
+    "BRIEF.md escolhe um arquétipo coerente com confiança e DMs (Formula, Teardown ou Template) e justifica",
+    "A tabela de variações registra pelo menos duas variações do padrão-base com motivo (tom premium)",
+    "A copy não usa 'rouba meu' nem caps gigante gritado; o CTA é contido",
+    "O elenco é sem rosto: a capa descreve um objeto ou cena, não uma pessoa",
+    "A estrutura tem entre 8 e 10 slides com posição marcada e teste de ordem",
+    "O slide 2 responde a capa com a mesma palavra-chave",
+    "Existe um slide de virada antes do CTA",
+    "O CTA leva a DM (comenta/manda mensagem) com entregável nomeado",
+    "legenda.txt tem entre 120 e 250 palavras, zero hashtags e no máximo 1 pergunta",
+    "Mediana de palavras por frase na legenda é 10 ou menos e não há palavras de hype",
+    "Os portões de copy do BRIEF estão marcados"
+   ]
+  },
+  {
+   "id": 3,
+   "prompt": "Critica esse carrossel que eu já tenho: 8 slides sobre 'como escolher fontes' — capa 'As melhores fontes para Instagram em 2026!' com foto de banco de um notebook, slide 2 'Você está escolhendo fontes errado', slides 3 a 7 com uma dica cada (texto longo, 80 palavras por slide, todos com o mesmo fundo branco), slide 8 'Segue pra mais dicas!'. Me diz o que está errado e reescreve a copy dos 8 slides e a legenda no padrão da skill.",
+   "expected_output": "Diagnóstico por posição usando as seis perguntas (capa é etiqueta/stock photo com palavras; slide 2 insulta e não paga a capa; sem espinha, sem ritmo, sem virada; CTA 'segue' não se liga a nada; hype e exclamação), notas na rubrica, e a reescrita: capa 2-4 palavras com trio no rodapé, slide 2 que responde a capa, regras com nome/definição/par/fecho, virada, CTA 'comenta PALAVRA' ou listicle com SAVE/SHARE justificado, legenda em 6 blocos.",
+   "files": [],
+   "assertions": [
+    "CRITICA.md diagnostica por posição: capa como etiqueta/foto de banco, slide 2 que insulta, falta de ritmo, falta de virada, CTA 'segue' desligado",
+    "CRITICA.md tem notas numéricas na rubrica (pelo menos 8 itens)",
+    "CRITICA.md lista os 3 maiores problemas",
+    "REESCRITA.md traz os 8 slides, cada um com posição e dispositivo",
+    "A capa nova tem 2 a 4 palavras no título, rodapé em trio e nenhum ponto de exclamação",
+    "O slide 2 novo não começa com 'você está ... errado' e responde a capa",
+    "A decisão de formato (listicle ou história) está explícita e justificada",
+    "O CTA novo é 'comenta PALAVRA' com entregável ou SALVA/COMPARTILHA justificado, sem 'segue pra mais'",
+    "A legenda nova tem entre 120 e 250 palavras, zero hashtags e zero ponto de interrogação",
+    "Mediana de palavras por frase na legenda é 10 ou menos, zero hype e zero exclamação"
+   ]
+  },
+  {
+   "id": 4,
+   "prompt": "faz o carrossel dos 8 layouts de capa (a mesma capa, oito layouts), com a minha cara, pra Fala IA. estático e vivo.",
+   "expected_output": "A partir do prompt de uma linha, a skill infere tudo do MARCA.md (set, elenco por foto de referência, fontes e paleta aprovadas), faz no máximo uma pergunta (teto de créditos ou confirmação do @), escreve BRIEF com cenas e estrutura editorial de 10 slides, gera as três cenas no Higgsfield com duas variações, renderiza os 10 PNGs com o dispositivo layout-slide, para no OK, e entrega o vivo com storyboard, MP4s, testes de diferença zero e créditos gastos. Nível de referência: assets/exemplos/aprovado/.",
+   "files": [],
+   "assertions": []
+  },
+  {
+   "id": 5,
+   "prompt": "faz um carrossel de 6 slides pra Fala IA sobre 'por que o seu agente de IA quebra em produção', igual a essa referência aqui (as capturas estão em refs/referencia-flowpilot/). estático.",
+   "expected_output": "A skill trata a referência como quem manda no visual (sem perguntar o que copiar): guarda em refs/, roda periciar.py, abre a folha com as medidas e os recortes tipo-*, identifica a grotesca pesada + serifa itálica fina + mono pelo atlas e baixa Switzer/Instrument Serif/JetBrains Mono com fontes.py, escreve docs/guia-de-estilo.md nas 12 dimensões com números (paleta lavanda→pêssego, 5 níveis com razão ~6×, margem 72, vazio 50 a 80 % nos internos, UI desenhada em cartão branco de 24 px sem foto, grão leve, cantos do IG livres) e 5 a 7 mecanismos verificáveis; liga os valores em marca.css/fontes.css; escreve a estrutura e a copy próprias (nada do conteúdo da referência); renderiza; roda comparar-pericia.py e folha.py --lado e corrige o que der REVISAR. Nível: assets/exemplos/referencia-dada/flowpilot-lado-a-lado.png.",
+   "files": [
+    "refs/referencia-flowpilot/"
+   ],
+   "assertions": [
+    "docs/pericia-*.md existe e o guia cita números dele",
+    "src/kit/marca.css troca --alta/--quieta/--mono e as cores",
+    "nenhuma frase, nome ou @ da referência aparece nos slides",
+    "comparar-pericia.py rodado e cada REVISAR comentado",
+    "cantos do Instagram livres mesmo que a referência invada"
+   ]
+  }
+ ]
+}
