@@ -42,7 +42,7 @@ No projeto aprovado "a mesma capa, oito layouts" as fotos foram geradas no Higgs
 Escreva cada cena assim no BRIEF: lugar · hora e luz · pose e roupa · o que está na mão ou no chão (a prova) · onde fica o espaço vazio pro texto · o que NÃO pode aparecer (texto, logos). Depois o prompt segue a fórmula acima (o que fica igual, coisas reais, layout em números, nunca texto).
 
 ## O set recorrente (o "mundo" da conta)
-Toda capa volta ao mesmo tipo de lugar até ele virar da conta (regra "world" do Alex). No `MARCA.md` fica o set e a cena do CTA; se a conta ainda não tem, proponha um no BRIEF a partir do tema e registre como "a confirmar". Pro Felipe o set aprovado é a paisagem aberta ao entardecer (estrada, campo, descampado, píer) e o CTA é o quiosque de praia.
+Toda capa volta ao mesmo tipo de lugar até ele virar da conta (regra "world" do Alex). No `MARCA.md` fica o set e a cena do CTA; se a conta ainda não tem, proponha um no BRIEF a partir do tema e registre como "a confirmar". No exemplo do `MARCA.md` (a conta do autor), o set aprovado é a paisagem aberta ao entardecer (estrada, campo, descampado, píer) e o CTA é o quiosque de praia.
 
 ## Preparo das fotos pro vivo (camadas)
 - **Recorte sem fundo** da pessoa (Higgsfield remove fundo, 1 crédito) → `assets/recortes/cenaN-pessoa-sem-fundo.png`.
