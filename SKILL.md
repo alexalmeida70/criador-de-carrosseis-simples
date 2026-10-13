@@ -1,26 +1,26 @@
 ---
 name: criador-de-carrosseis-simples
 description: >
-  VERSÃO SIMPLES (a dos alunos) do criador de carrosséis: sem seletor de
-  fidelidade e sem seletor de música; o visual é sempre o padrão-base (ou a
-  referência, quando vier uma) e a música do vivo é sempre a editorial. Use só
-  quando o Felipe pedir a "versão simples", a "skill dos alunos" ou chamar
-  /criador-de-carrosseis-simples; pra qualquer outro pedido de carrossel use a
-  criador-de-carrosseis completa. Cria CARROSSÉIS do Instagram de nível de diretor de arte, do tema à entrega:
+  Cria CARROSSÉIS do Instagram de nível de diretor de arte, do tema à entrega:
   estratégia (arquétipo pelo resultado que se quer: save, share, comentário,
   follow), estrutura narrativa em 6 posições (capa, slide 2, espinha, ritmo,
   virada, payoff), copy slide a slide + legenda + CTA, capa em 5 passos (mundo,
   sujeito, contraste, prova, tipo) com imagens no Higgsfield quando houver,
   design em código puro (um HTML por slide, texto de verdade, PNG 1080x1350),
   crítica com notas até ficar bom, e opcionalmente a versão VIVA (cada slide em
-  MP4 em loop) na rota código puro do Felipe. A gramática vem dos carrosséis do
+  MP4 em loop) em código puro. É a VERSÃO SIMPLES: sem seletor de fidelidade
+  (sem referência, o visual é o padrão-base; com referência, ela manda) e sem
+  seletor de música (uma só, a editorial). A gramática vem dos carrosséis do
   @growithalex (Alex, Creative Strategist) em três camadas: invariantes (sempre),
-  padrão-base (o default dele) e variações (quando e como sair do padrão). Mesmo processo em 9 passos da
-  completa (BRIEF, copy, capa, design em código, crítica, entrega). NÃO use para
-  roteiro de vídeo (criador-de-roteiros), thumbnail do YouTube
-  (higgsfield-youtube-thumbnail), material de aula (aula-html), nem para
-  motion graphics de vídeo do canal (edicao-aiverso). Esta skill não usa
-  HyperFrames nem Remotion: carrossel vivo é HTML + seek(t) + Playwright + ffmpeg.
+  padrão-base (o default dele) e variações (quando e como sair do padrão). Use
+  SEMPRE que a pessoa pedir um carrossel, "post em carrossel", "slides pro
+  Instagram", "carrossel vivo", "capa de carrossel", "legenda pro carrossel",
+  "transforma esse tema/vídeo/aula em carrossel", "no estilo do Alex /
+  growithalex", "um listicle de X", "um carrossel pra lançar Y", ou quiser
+  revisar/criticar um carrossel pronto, mesmo sem citar a skill. NÃO use para
+  roteiro de vídeo, thumbnail do YouTube, material de aula nem motion graphics
+  de vídeo. Esta skill não usa HyperFrames nem Remotion: carrossel vivo é
+  HTML + seek(t) + Playwright + ffmpeg.
 ---
 
 # Criador de carrosséis (versão simples)
@@ -29,7 +29,7 @@ Esta é a versão sem seletores. O que muda em relação à completa: não exist
 
 Um carrossel não é um recipiente de informação. É uma máquina de querer: a capa faz a pessoa querer algo que não queria cinco segundos antes, o slide 2 paga essa promessa, o meio segura, a virada muda o sentido do que veio antes e o último slide pede o próximo passo. Tudo nesta skill serve a isso.
 
-A gramática foi levantada em 8 out 2026 a partir de 19 carrosséis e 17 reels do @growithalex mais dois vídeos dele (o viral de 97,9k curtidas foi um listicle de seis pares de fontes). O arquivo completo, com os slides originais, fica em `~/carroussel/referencia/growithalex/` (síntese em `00-GRAMATICA-DO-ALEX.md`). Pegue a gramática, nunca o conteúdo, as cenas, o rosto ou o cabeçalho dele.
+A gramática foi levantada em 8 out 2026 a partir de 19 carrosséis e 17 reels do @growithalex mais dois vídeos dele (o viral de 97,9k curtidas foi um listicle de seis pares de fontes). Os slides originais dele não vêm com a skill (direitos de terceiros); a gramática está destilada em `references/`. Pegue a gramática, nunca o conteúdo, as cenas, o rosto ou o cabeçalho dele.
 
 ## As três camadas (leia antes de decidir qualquer coisa)
 
@@ -58,10 +58,10 @@ O pedido pode vir numa linha ("faz um carrossel sobre X"). A carga de pensar é 
 | Item | Default (infira) | Pergunte só se |
 |---|---|---|
 | Tema e a frase única | do pedido; a frase você escreve | o pedido não diz o tema |
-| Conta e marca | `MARCA.md` da conta (o da Fala IA está no template); sem MARCA, crie um a partir do pedido e marque "a confirmar" | é uma conta nova sem nenhum dado |
+| Conta e marca | `MARCA.md` da conta (o template traz um exemplo preenchido); sem MARCA, crie um a partir do pedido e marque "a confirmar" | é uma conta nova sem nenhum dado |
 | Resultado desejado → arquétipo | save (Formula ou System) se é ensino; share (Teardown) se é antes × depois; DM (Template) se há material | o pedido mistura objetivos |
 | Público e tom | o do MARCA; sem MARCA, direto/criador | a marca é de outro (clínica, loja) e o tom não está claro |
-| Elenco | o do MARCA (Felipe: foto de referência em `~/carroussel/identidade-felipe/`); marca sem pessoa: sem rosto | a pessoa aparece ou não (muda a capa inteira) |
+| Elenco | o do MARCA (foto de referência da pessoa em `assets/identidade/` do projeto, ou Soul treinado); marca sem pessoa: sem rosto | a pessoa aparece ou não (muda a capa inteira) |
 | Set e cenas | o set do MARCA; sem set, proponha a partir do tema (05-capa.md) | nunca; mostre as fotos e deixe trocar |
 | Entrega | estático; "vivo" ou "os dois" se o pedido disser | o pedido não diz E a conta publica carrossel vivo |
 | Referência | nenhuma → padrão-base. Se vier (link, capturas, vídeo): `09-referencia.md` (ela manda em fonte, cor, grade, preenchimento, imagens; o MARCA entra só com @, rodapé, elenco e tom) | `scripts/baixar-ig.py` falhou, navegador sem login no Instagram (peça as capturas) |
@@ -77,7 +77,7 @@ Pergunta boa: "A sua cara aparece nas capas (fotos suas com o Higgsfield) ou fa�
 Tudo como manda `09-referencia.md`: guarde em `refs/` (link do Instagram: `python3 scripts/baixar-ig.py URL --nome x`, baixa post, carrossel ou reel com os cookies do Chrome logado; nunca diga que o link não abre sem rodar o script); rode `python3 scripts/periciar.py refs/referencia-x --nome x`; abra a folha com as medidas e os recortes `tipo-*` de verdade; identifique a fonte pelo atlas (`10`) e baixe com `scripts/fontes.py`; escreva `docs/guia-de-estilo.md` nas doze dimensões, cada uma com número e com o jeito de reproduzir no motor, fechando com 5 a 7 mecanismos verificáveis; ligue os valores em `src/kit/marca.css` e `fontes.css`. A referência manda no que é visível; estratégia, estrutura, copy e crítica continuam das camadas 1 e 3. O BRIEF ganha a seção 1b com a tabela "da referência / do MARCA / do padrão-base".
 
 ### 1. Estratégia (10 linhas, no BRIEF.md)
-Resultado → arquétipo. Sentimento em uma palavra (calmo, urgente, certo). A frase única que o carrossel defende. O teste de tema antes de qualquer copy: alguém procuraria isso daqui a um ano, e alguém mandaria um slide pra um amigo? Se a resposta honesta é não, diga ao Felipe antes de continuar. Estrutura não salva tema fraco: o Alex arquivou um carrossel perfeito por isso.
+Resultado → arquétipo. Sentimento em uma palavra (calmo, urgente, certo). A frase única que o carrossel defende. O teste de tema antes de qualquer copy: alguém procuraria isso daqui a um ano, e alguém mandaria um slide pra um amigo? Se a resposta honesta é não, diga à pessoa antes de continuar. Estrutura não salva tema fraco: o Alex arquivou um carrossel perfeito por isso.
 
 ### 2. Estrutura (o mapa de slides)
 Uma linha por slide com a posição que ocupa (open, hold, spine, rhythm, turn, payoff) e o dispositivo. Rode o teste de ordem: se dois slides do meio podem trocar de lugar, não há história (listicle é a exceção declarada). Marque onde está a virada e que forma ela tem.
@@ -109,7 +109,7 @@ Depois do OK: `STORYBOARD.md` na grade de 120 BPM a partir do catálogo de movim
 - "Salve este post" é fraco. CTA é uma palavra-chave que é o tema do post, com entregável de duas ou três partes nomeadas. Exceção: listicle puro pede SAVE e SHARE.
 - Sem HyperFrames, sem Remotion, sem Canva. Código puro, Playwright, ffmpeg.
 - Prefira a prova em par (ruim × bom, antes × depois) construída com a MESMA cena mudando uma variável. É a prova mais barata e mais forte.
-- O Felipe chamou de "aislop" uma v1 serifada com paleta bonitinha e foto fraca. O estilo do Alex é serifa mais grotesk: a diferença está na imagem de mundo forte, uma cor, contraste e espaço. Se a imagem for fraca, a mesma gramática vira slop. O portão de qualidade fica na imagem, não na fonte.
+- Uma v1 serifada com paleta bonitinha e foto fraca foi reprovada como "aislop". O estilo do Alex é serifa mais grotesk: a diferença está na imagem de mundo forte, uma cor, contraste e espaço. Se a imagem for fraca, a mesma gramática vira slop. O portão de qualidade fica na imagem, não na fonte.
 
 ## Exemplo rápido de como as camadas decidem
 

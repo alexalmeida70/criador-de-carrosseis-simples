@@ -30,7 +30,7 @@ Nesta versão não há modo a escolher. Sem referência: mesma estrutura do padr
 - Tem paleta: travar três ou quatro; escolher qual lidera por sentimento.
 - Não é uma pessoa: elenco sem rosto (objeto, produto ou personagem); "rouba meu" vira "o método de [marca]".
 - Tem bordão: assina a legenda; se não tem, não inventa um no primeiro carrossel.
-- Tem "set" (lugar recorrente): toda capa volta lá. Se não tem, proponha um no BRIEF e deixe a decisão pro Felipe.
+- Tem "set" (lugar recorrente): toda capa volta lá. Se não tem, proponha um no BRIEF e deixe a decisão pra pessoa.
 
 ## Sinais de troca por formato
 - **Listicle de utilidade** (fontes, cores, ferramentas, buscas): o slide é a resposta, 6 a 13 palavras, mesma forma em todos, conjunto que vale terminar. É o formato do viral; também é o mais copiado, então a capa precisa de "mundo" forte.

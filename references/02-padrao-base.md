@@ -9,7 +9,7 @@ Use como ponto de partida quando o pedido e o `MARCA.md` não disserem outra coi
 - **Elenco e set:** a pessoa como personagem de uma cena cinematográfica, nunca a cara colada no post. O mesmo tipo de lugar repetido até virar seu (deserto, praia, campo). As capas antigas como props das novas (o "archive").
 
 ## 1b. A receita visual padrão (o que a skill usa quando o MARCA.md não diz outra coisa)
-Valores aprovados pelo Felipe no projeto "a mesma capa, oito layouts" (out/2026), já no `assets/engine/kit.css`:
+Valores aprovados no projeto "a mesma capa, oito layouts" (out/2026), já no `assets/engine/kit.css`:
 
 | Token | Valor | Onde |
 |---|---|---|
@@ -30,7 +30,7 @@ Já implementada em `assets/engine/dispositivos/layout-slide.js` e no `kit.css`:
 - Círculo laranja Ø172 em x=72, y=140, número Geist 800 88 px em tinta. Nome do layout a partir de x=268, linha de base y=236, até 116 px (encolhe até caber em 738 px, nunca quebra). Subtítulo Geist 500 38 px, base y=296.
 - Cartão da prova: x=72, y=352, 560×700, sem borda, sem sombra, cantos retos. Coluna da direita a partir de x=676, 332 px de largura, centrada na altura do cartão; três frases Geist 500 31 px separadas por dois fios de 3 px e 250 px.
 - Barra de veredito em x=72, y=1096, a largura abraça a frase (Geist 700 36 px), 25 px de respiro, até duas linhas.
-- Rodapé em Geist Mono 20 px: `@handle` em x=72 e `criador · fala ia` em x=676, base y=1278 (longe do ícone de som).
+- Rodapé em Geist Mono 20 px: `@handle` em x=72 e `criador · [conta]` em x=676, base y=1278 (longe do ícone de som).
 - Zonas proibidas: contador do Instagram (x > 880, y < 150) e ícone de som (x > 940, y > 1210). Margem de 72 px.
 - Ordem de leitura (que vira a ordem do movimento no vivo): número → nome → subtítulo → cartão → frases de cima pra baixo → barra.
 

@@ -33,7 +33,7 @@ Exceção declarada: o **listicle** (uma coisa por slide, mesma forma em todos) 
 6. Espaço vazio é confiança. Cada elemento a mais tira emoção.
 7. Se dá pra adivinhar o tema só pela imagem da capa, é ilustração. Se a imagem serviria pra outro tema, é foto de banco com palavras.
 
-## Portões antes de mostrar qualquer coisa ao Felipe
+## Portões antes de mostrar qualquer coisa à pessoa
 - [ ] As seis perguntas respondidas por escrito no BRIEF (ou "listicle" declarado).
 - [ ] Teste de ordem feito: nenhum slide do meio troca de lugar.
 - [ ] Capa testada a 128 px e a 390 px; a palavra gigante lê como forma.

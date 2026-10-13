@@ -1,6 +1,6 @@
 # criador-de-carrosseis-simples
 
-**Versão simples**, a que vai pros alunos. É a mesma skill `criador-de-carrosseis` sem dois seletores: não tem ajuste de fidelidade (sem referência, o visual é o padrão-base; com referência, a referência manda no visual inteiro, sempre) e não tem escolha de estilo de música no carrossel vivo (uma só, a editorial). A versão completa, com os dois seletores, fica no Design OS.
+**Versão simples** do criador de carrosséis. É a mesma skill sem dois seletores: não tem ajuste de fidelidade (sem referência, o visual é o padrão-base; com referência, a referência manda no visual inteiro, sempre) e não tem escolha de estilo de música no carrossel vivo (uma só, a editorial). A versão completa, com os dois seletores, roda dentro do Design OS.
 
 Skill do Claude Code pra criar carrosséis do Instagram de nível de diretor de arte, do tema à entrega: estratégia, estrutura narrativa em seis posições, copy slide a slide com legenda e CTA, capa em cinco passos, design em código puro (um HTML por slide, texto de verdade, PNG 1080x1350), crítica com notas até ficar bom e, opcionalmente, a versão viva (cada slide em MP4 em loop).
 
@@ -15,7 +15,7 @@ A gramática vem do estudo de 19 carrosséis e 17 reels do @growithalex (Alex, C
 ## Instalar
 
 ```bash
-git clone <repositório desta versão> ~/.claude/skills/criador-de-carrosseis-simples
+git clone https://github.com/Felpborges/criador-de-carrosseis-simples.git ~/.claude/skills/criador-de-carrosseis-simples
 ```
 
 Depois é só pedir um carrossel no Claude Code (ou chamar `/criador-de-carrosseis-simples`).

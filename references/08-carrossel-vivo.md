@@ -1,6 +1,6 @@
 # Carrossel vivo: do estático aprovado ao MP4 em loop
 
-Só depois do estático aprovado. O quadro 0 de cada MP4 é EXATAMENTE o PNG aprovado (diferença zero, pixel por pixel); o resto é o movimento voltando ao repouso. As regras completas estão no `CLAUDE.md` da pasta `~/carroussel/` e valem acima deste resumo. O projeto aprovado que fixou este método: "a mesma capa, oito layouts" (`~/carroussel/projetos/layouts-de-capa-01/`, STORYBOARD em `assets/templates/STORYBOARD-exemplo.md`, folhas e testes em `assets/exemplos/aprovado/`).
+Só depois do estático aprovado. O quadro 0 de cada MP4 é EXATAMENTE o PNG aprovado (diferença zero, pixel por pixel); o resto é o movimento voltando ao repouso. As regras do formato estão na seção seguinte. O projeto aprovado que fixou este método: "a mesma capa, oito layouts" (STORYBOARD em `assets/templates/STORYBOARD-exemplo.md`, folhas e testes em `assets/exemplos/aprovado/`).
 
 ## O formato
 - Um MP4 por slide, 1080×1350, 30 fps, H.264 yuv420p bt709, com o próprio som em -14 LUFS. Loop sem emenda em compassos inteiros a 120 BPM: capa e CTA com 8 s, cartões internos com 6 s (4 s só pra slides de uma frase).

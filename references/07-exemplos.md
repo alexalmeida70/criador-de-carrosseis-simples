@@ -16,7 +16,7 @@ O projeto "a mesma capa, oito layouts" (out/2026) é o melhor resultado até ago
 3. Pegue a gramática (grade, escala, dispositivo, ritmo entre slides), nunca o conteúdo, a cena, o rosto nem o cabeçalho dele.
 4. A linha "ritmo" de cada post no índice mostra a alternância de fundos que ele usa; copie o princípio da alternância, não a sequência.
 
-Arquivo original em tamanho real (1080×1350), legendas, reels e análises slide a slide: `~/carroussel/referencia/growithalex/` (`galeria.html`, `analise/`).
+Os posts originais em tamanho real não vêm com a skill (direitos de terceiros): quem quiser ver o arquivo inteiro, estude direto no Instagram dele.
 
 ## Capas (`capa-*`)
 | Arquivo | O que ensina |
