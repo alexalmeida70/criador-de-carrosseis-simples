@@ -1,5 +1,12 @@
 # BRIEF · [nome do carrossel]
 
+## 0. Contexto do negócio
+- **Grupo:** Grupo MR | Máquina de Resultados
+- **Unidade de negócio:** (obrigatória em todo novo projeto; não inferir)
+- **Marca, produto ou oferta:**
+- **Conta / @ de publicação:**
+- **Responsável / aprovador:**
+
 ## 1. Estratégia
 - **Tema:** 
 - **Resultado desejado:** save / share / comentário-DM / follow → **Arquétipo:** 

@@ -76,10 +76,14 @@ Referências, na ordem em que você vai precisar:
 
 O pedido pode vir numa linha ("faz um carrossel sobre X"). A carga de pensar é sua, não da pessoa: preencha tudo que dá pra inferir, registre cada inferência no BRIEF como "assumido", e pergunte só o que muda o resultado e não dá pra adivinhar. No máximo três perguntas, numa mensagem só, antes de começar; o resto vai pra parada do BRIEF.
 
+Todo projeto pertence ao **Grupo MR | Máquina de Resultados** e precisa declarar uma **unidade de negócio**. No início de cada novo projeto, faça esta pergunta antes da estratégia: **"Para qual unidade de negócio do Grupo MR | Máquina de Resultados este carrossel será criado?"** Se a unidade já estiver explicitamente informada no pedido, considere a pergunta respondida e apenas registre a resposta no BRIEF. Nunca infira a unidade pelo tema, pela conta ou por um projeto anterior.
+
 | Item | Default (infira) | Pergunte só se |
 |---|---|---|
 | Tema e a frase única | do pedido; a frase você escreve | o pedido não diz o tema |
-| Conta e marca | `MARCA.md` da conta (o template traz um exemplo preenchido); sem MARCA, crie um a partir do pedido e marque "a confirmar" | é uma conta nova sem nenhum dado |
+| Grupo | `Grupo MR | Máquina de Resultados` | nunca; é fixo |
+| Unidade de negócio | nenhuma; deve ser declarada a cada projeto | sempre que não estiver explícita no pedido; não inferir |
+| Conta e marca | `MARCA.md` da unidade/conta; sem MARCA, crie um a partir do pedido e marque "a confirmar" | é uma conta nova sem nenhum dado |
 | Resultado desejado → arquétipo | save (Formula ou System) se é ensino; share (Teardown) se é antes × depois; DM (Template) se há material | o pedido mistura objetivos |
 | Público e tom | o do MARCA; sem MARCA, direto/criador | a marca é de outro (clínica, loja) e o tom não está claro |
 | Elenco | o do MARCA (foto de referência da pessoa em `assets/identidade/` do projeto, ou Soul treinado); marca sem pessoa: sem rosto | a pessoa aparece ou não (muda a capa inteira) |

@@ -82,6 +82,14 @@ def main():
     errors = 0
     text = SKILL.read_text(encoding="utf-8")
     errors += validate_frontmatter(text)
+    required_business_context = [
+        "Grupo MR | Máquina de Resultados",
+        "Para qual unidade de negócio do Grupo MR | Máquina de Resultados este carrossel será criado?",
+        "Nunca infira a unidade",
+    ]
+    for token in required_business_context:
+        if token not in text:
+            errors += fail(f"regra de unidade de negócio ausente no SKILL.md: {token}")
     for relative in REQUIRED:
         if not (ROOT / relative).exists():
             errors += fail(f"arquivo obrigatório ausente: {relative}")

@@ -6,6 +6,10 @@ Skill compatível com Codex, ChatGPT e Claude Code para criar carrosséis do Ins
 
 > Esta versão é uma adaptação de Alex Almeida do projeto original criado por [Felipe Borges (Felpborges)](https://github.com/Felpborges/criador-de-carrosseis-simples). O histórico do fork preserva os commits e créditos do criador original.
 
+## Arquitetura de marca desta adaptação
+
+O contexto institucional fixo é **Grupo MR | Máquina de Resultados**. Cada carrossel deve declarar a unidade de negócio à qual pertence; a skill pergunta isso no início de todo novo projeto quando a informação não estiver explícita no pedido. A unidade escolhida determina a marca, a conta, o público, o tom, a oferta e o CTA registrados em `MARCA.md` e `BRIEF.md`.
+
 A gramática vem do estudo de 19 carrosséis e 17 reels do @growithalex (Alex, Creative Strategist) mais dois vídeos dele, organizada em três camadas:
 
 | Camada | O que é | Peso |

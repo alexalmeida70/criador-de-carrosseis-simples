@@ -1,9 +1,15 @@
-# MARCA.md · documento de marca da conta (preencha uma vez, use em todo carrossel)
+# MARCA.md · Grupo MR | Máquina de Resultados · documento da unidade de negócio
 
-> Copie pra pasta da conta (ou do projeto) e preencha. A skill lê este arquivo antes de escolher fonte, cor, elenco e tom. Campo em branco = a skill pergunta.
+> O grupo é fixo; a unidade de negócio é definida em cada novo projeto. Copie este arquivo pra pasta da unidade/conta e preencha. A skill lê este arquivo antes de escolher fonte, cor, elenco e tom. Campo em branco = a skill pergunta.
 > Quando o pedido traz uma **referência**, ela manda no visual (fontes, cores, grade, imagens, preenchimento); deste arquivo entram só o @, o rodapé, o elenco e o tom (`references/09-referencia.md`).
 
-## Identidade
+## Arquitetura de marca
+- **Grupo:** Grupo MR | Máquina de Resultados
+- **Unidade de negócio:** (obrigatória; não inferir)
+- **Marca, produto ou oferta:**
+- **Responsável pela unidade:**
+
+## Identidade da conta
 - **Conta / @:** 
 - **Nome como aparece no cabeçalho:** (ex.: "FELIPE BORGES")
 - **Título profissional / recibo:** (ex.: "CRIADOR · FALA IA" · "120 MIL INSCRITOS")
@@ -45,7 +51,9 @@
 
 ---
 
-## Exemplo preenchido: a conta do autor da skill (Fala IA) · aprovado em out/2026. Troque pelos dados da sua conta
+## Exemplo preenchido do projeto original: Fala IA · aprovado em out/2026. Troque pelos dados da unidade e da conta
+- **Grupo:** exemplo externo ao Grupo MR; não reutilizar como unidade de negócio.
+- **Unidade de negócio:** Fala IA (exemplo original).
 - **@:** `@felipeborgesfalaia` (provisório, confirmar). Não entra na arte, só no rodapé em mono: `@felipeborgesfalaia` à esquerda · `criador · fala ia` à direita.
 - **Cabeçalho da capa:** `FALA IA · [recibo]` (o número real de inscritos ou de curtidas, a confirmar). Internos: mês/ano · FELIPE BORGES · CRIADOR · FALA IA.
 - **Tom:** direto/criador. Ensina a criar conteúdo com Claude Code e IA, em PT-BR.
