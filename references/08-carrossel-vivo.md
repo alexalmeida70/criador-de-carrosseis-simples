@@ -39,7 +39,10 @@ Proibido (CLAUDE.md): tudo entrando com fade, brilho, neon, partícula. Entradas
 4. `python3 scripts/folha-batidas.py resultados/quadros/slide-NN resultados/folhas/slide-NN-batidas.jpg` → folha por batida.
 5. `python3 scripts/testes-vivo.py` → `resultados/testes.json` e as duas imagens em `resultados/testes/`: quadro 0 = PNG (diferença e PSNR do MP4), último quadro = quadro 0, som na emenda × compasso interno, formato do MP4.
 6. `python3 scripts/preview.py` → `preview.html` com os MP4 em ordem e botão "tocar todos com som".
-Tudo de uma vez: `zsh scripts/vivo.sh [all|02,03]`.
+Tudo de uma vez:
+
+- Windows: `powershell -ExecutionPolicy Bypass -File scripts/vivo.ps1 [all|02,03]`
+- macOS/Linux: `zsh scripts/vivo.sh [all|02,03]`
 
 ## Storyboard (`assets/templates/STORYBOARD.md`, exemplo real em `STORYBOARD-exemplo.md`)
 Pra cada slide: duração em compassos, compassos da música, e uma linha por batida: tempo, o que se mexe, o som. Escreva a partir do catálogo acima e da ordem de leitura do slide. Mostre e espere o OK antes de animar.

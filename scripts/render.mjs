@@ -10,9 +10,16 @@ import fs from 'node:fs'; import path from 'node:path'; import http from 'node:h
 import { createRequire } from 'node:module';
 const ROOT = process.cwd();
 let chromium;
-try { ({ chromium } = createRequire(path.join(ROOT, 'package.json'))('playwright')); }
-catch { ({ chromium } = createRequire(path.join(process.env.PLAYWRIGHT_DIR || (process.env.HOME + '/carroussel/projetos/orbit-saas-02'), 'package.json'))('playwright')); }
-const EXE = process.env.CHROME_HEADLESS || (process.env.HOME + '/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell');
+try {
+  ({ chromium } = createRequire(path.join(ROOT, 'package.json'))('playwright'));
+} catch (localError) {
+  const playwrightDir = process.env.PLAYWRIGHT_DIR;
+  if (!playwrightDir) {
+    throw new Error('Playwright não encontrado. Rode: npm install playwright && npx playwright install chromium', { cause: localError });
+  }
+  ({ chromium } = createRequire(path.join(playwrightDir, 'package.json'))('playwright'));
+}
+const EXE = process.env.CHROME_HEADLESS;
 const FPS = 30;
 const TIPOS = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.jpg': 'image/jpeg', '.ttf': 'font/ttf', '.json': 'application/json', '.wav': 'audio/wav', '.mp4': 'video/mp4', '.svg': 'image/svg+xml' };
 const pad = (n, k = 4) => String(n).padStart(k, '0');
@@ -22,8 +29,8 @@ const lista = (a) => (!a || a === 'all' ? todos() : a.split(',').map((s) => pad(
 function servidor() {
   return new Promise((ok) => {
     const s = http.createServer((req, res) => {
-      const p = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]));
-      if (!p.startsWith(ROOT) || !fs.existsSync(p) || fs.statSync(p).isDirectory()) { res.writeHead(404); return res.end(); }
+      const p = path.resolve(ROOT, `.${decodeURIComponent(req.url.split('?')[0])}`);
+      if (!(p === ROOT || p.startsWith(ROOT + path.sep)) || !fs.existsSync(p) || fs.statSync(p).isDirectory()) { res.writeHead(404); return res.end(); }
       res.writeHead(200, { 'Content-Type': TIPOS[path.extname(p)] || 'application/octet-stream' }); fs.createReadStream(p).pipe(res);
     });
     s.listen(0, '127.0.0.1', () => ok(s));
@@ -41,7 +48,9 @@ const shot = (page, t, file) => page.evaluate((tt) => window.seek(tt), t).then((
 
 const [modo, a1, a2, a3] = process.argv.slice(2);
 const srv = await servidor(); const porta = srv.address().port;
-const browser = await chromium.launch({ executablePath: fs.existsSync(EXE) ? EXE : undefined, args: ['--disable-gpu', '--disable-gpu-compositing', '--force-color-profile=srgb', '--disable-lcd-text', '--font-render-hinting=none'] });
+const launchOptions = { args: ['--disable-gpu', '--disable-gpu-compositing', '--force-color-profile=srgb', '--disable-lcd-text', '--font-render-hinting=none'] };
+if (EXE && fs.existsSync(EXE)) launchOptions.executablePath = EXE;
+const browser = await chromium.launch(launchOptions);
 try {
   if (modo === 'stills') {
     const dir = path.join(ROOT, 'resultados', 'estatico'); fs.mkdirSync(dir, { recursive: true });

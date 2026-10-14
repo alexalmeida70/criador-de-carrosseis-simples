@@ -1,0 +1,33 @@
+name: Validar skill
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validar estrutura e Python
+        run: python scripts/validate_skill.py
+      - name: Validar JavaScript
+        run: node --check scripts/render.mjs
+      - name: Validar shell
+        run: bash -n scripts/vivo.sh
+      - name: Validar PowerShell
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile("$PWD/scripts/vivo.ps1", [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count) {
+            $errors | ForEach-Object { Write-Error $_ }
+            exit 1
+          }

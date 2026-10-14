@@ -25,6 +25,27 @@ description: >
 
 # Criador de carrosséis (versão simples)
 
+## Autoria
+
+- Autor: Alex Almeida
+- E-mail: alex@maquinaderesultados.com.br
+- Site: https://www.maquinaderesultados.com.br
+- LinkedIn: https://br.linkedin.com/in/alexalmeida70
+- Instagram: https://www.instagram.com/alexalmeida70/
+
+## Compatibilidade de execução
+
+Esta skill pode ser lida por Codex, ChatGPT e Claude Code. Para executar os scripts de renderização, use um ambiente com acesso ao terminal, como Codex ou Claude Code. No ChatGPT sem terminal, produza o briefing, a estrutura, a copy e as instruções de design, mas não afirme que PNGs ou MP4s foram renderizados.
+
+Antes de rodar comandos, detecte o sistema operacional e escolha a variante disponível:
+
+- Python: `py -3` ou `python` no Windows; `python3` no macOS/Linux.
+- Carrossel vivo: `powershell -ExecutionPolicy Bypass -File scripts/vivo.ps1` no Windows; `zsh scripts/vivo.sh` no macOS/Linux.
+- Instalação da skill: `.codex/skills/` para Codex e `.claude/skills/` para Claude Code.
+- Playwright: prefira a dependência local do projeto. Se ela não existir, rode `npm install playwright` e `npx playwright install chromium`. `PLAYWRIGHT_DIR` continua disponível como alternativa explícita.
+
+Nos exemplos abaixo, `python3` representa o executável Python disponível na plataforma.
+
 Esta é a versão sem seletores. O que muda em relação à completa: não existe ajuste de fidelidade (sem referência, o visual é o padrão-base; com referência, a referência manda no visual inteiro, sempre) e não existe escolha de música no vivo (uma só, a editorial do `musica.py`). Tudo o mais é igual.
 
 Um carrossel não é um recipiente de informação. É uma máquina de querer: a capa faz a pessoa querer algo que não queria cinco segundos antes, o slide 2 paga essa promessa, o meio segura, a virada muda o sentido do que veio antes e o último slide pede o próximo passo. Tudo nesta skill serve a isso.
@@ -47,7 +68,7 @@ Referências, na ordem em que você vai precisar:
 - `references/05-capa.md` · os cinco passos da capa, os dois testes, a fórmula de prompt de imagem, as três rotas de elenco (sem rosto, foto de referência, Soul).
 - `references/06-critica.md` · a rubrica de notas, o teste de miniatura, o checklist anti-aislop.
 - `references/07-exemplos.md` · como usar os acervos como referência de design: o de referência (`assets/exemplos/`, 179 slides do Alex, só local) e o próprio (`assets/acervo/`, os carrosséis aprovados do autor, vai junto com a skill), com os destaques e o que cada um ensina.
-- `references/08-carrossel-vivo.md` · a passagem pra versão em movimento: catálogo de movimento por tipo de slide, som, música, storyboard, as ferramentas (`scripts/vivo.sh`) e os testes de diferença zero.
+- `references/08-carrossel-vivo.md` · a passagem pra versão em movimento: catálogo de movimento por tipo de slide, som, música, storyboard, as ferramentas (`scripts/vivo.sh` ou `scripts/vivo.ps1`) e os testes de diferença zero.
 - `references/09-referencia.md` · quando o pedido traz uma referência (post, capturas, vídeo): a referência manda no visual inteiro. Guardar, medir com `scripts/periciar.py`, desmontar em 12 dimensões no `docs/guia-de-estilo.md` (fonte, cor, grade, espaçamento, preenchimento, hierarquia, imagens e como são feitas, formas, textura, ritmo, movimento), ligar no motor e testar contra ela em número e no olho.
 - `references/10-atlas-de-fontes.md` · identificar a fonte da referência pelos recortes e achar a equivalente livre (Google Fonts, Fontshare); `scripts/fontes.py` baixa.
 
@@ -98,7 +119,7 @@ Olhe a folha e a miniatura de verdade. Dê nota de 1 a 10 em cada item de `06-cr
 Na pasta do projeto: `BRIEF.md`, `docs/copy.md`, `resultados/estatico/slide-NN.png`, `folha.png`, `miniatura.png`, `legenda.txt`, `preview.html`, mais o relatório (notas por rodada, créditos gastos). Diga em três linhas o que melhoraria em seguida. **Se a entrega inclui o vivo: parada aqui, espere o OK dos PNGs.**
 
 ### 8. Entrega B (vivo, só se pedido)
-Depois do OK: `STORYBOARD.md` na grade de 120 BPM a partir do catálogo de movimento de `08-carrossel-vivo.md` (capa e CTA 8 s, cartões 6 s), uma linha por batida com o som; mostre e espere o OK. Depois: `seek(t)` em cada slide com os acertos declarados em `K.slide({cues})`, `zsh scripts/vivo.sh` (beats → música → MP4 → folhas por batida → testes → preview). Entregue `resultados/slide-NN.mp4`, as folhas, os testes (quadro 0 = PNG com diferença zero, loop, som), a tabela de notas e os créditos. Régua: "o movimento serve à ideia do slide ou é enfeite?"
+Depois do OK: `STORYBOARD.md` na grade de 120 BPM a partir do catálogo de movimento de `08-carrossel-vivo.md` (capa e CTA 8 s, cartões 6 s), uma linha por batida com o som; mostre e espere o OK. Depois: `seek(t)` em cada slide com os acertos declarados em `K.slide({cues})`, `powershell -ExecutionPolicy Bypass -File scripts/vivo.ps1` no Windows ou `zsh scripts/vivo.sh` no macOS/Linux (beats → música → MP4 → folhas por batida → testes → preview). Entregue `resultados/slide-NN.mp4`, as folhas, os testes (quadro 0 = PNG com diferença zero, loop, som), a tabela de notas e os créditos. Régua: "o movimento serve à ideia do slide ou é enfeite?"
 
 ## Regras que não mudam com a camada
 - Uma pasta por carrossel. Nunca leia nem sobrescreva o que está fora dela, a não ser as referências desta skill.

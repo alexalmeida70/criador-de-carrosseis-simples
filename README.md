@@ -2,7 +2,9 @@
 
 **Versão simples** do criador de carrosséis. É a mesma skill sem dois seletores: não tem ajuste de fidelidade (sem referência, o visual é o padrão-base; com referência, a referência manda no visual inteiro, sempre) e não tem escolha de estilo de música no carrossel vivo (uma só, a editorial). A versão completa, com os dois seletores, roda dentro do Design OS.
 
-Skill do Claude Code pra criar carrosséis do Instagram de nível de diretor de arte, do tema à entrega: estratégia, estrutura narrativa em seis posições, copy slide a slide com legenda e CTA, capa em cinco passos, design em código puro (um HTML por slide, texto de verdade, PNG 1080x1350), crítica com notas até ficar bom e, opcionalmente, a versão viva (cada slide em MP4 em loop).
+Skill compatível com Codex, ChatGPT e Claude Code para criar carrosséis do Instagram de nível de diretor de arte, do tema à entrega: estratégia, estrutura narrativa em seis posições, copy slide a slide com legenda e CTA, capa em cinco passos, design em código puro (um HTML por slide, texto de verdade, PNG 1080x1350), crítica com notas até ficar bom e, opcionalmente, a versão viva (cada slide em MP4 em loop).
+
+> Esta versão é uma adaptação de Alex Almeida do projeto original criado por [Felipe Borges (Felpborges)](https://github.com/Felpborges/criador-de-carrosseis-simples). O histórico do fork preserva os commits e créditos do criador original.
 
 A gramática vem do estudo de 19 carrosséis e 17 reels do @growithalex (Alex, Creative Strategist) mais dois vídeos dele, organizada em três camadas:
 
@@ -12,22 +14,45 @@ A gramática vem do estudo de 19 carrosséis e 17 reels do @growithalex (Alex, C
 | **Padrão-base** | O default visual e de copy: serifa display gigante, grotesk de apoio, um acento, linho e tecido com textura, fórmulas de capa, slide 2, regra, virada, CTA e legenda. | Ponto de partida. |
 | **Variações** | Quando sair do padrão (arquétipo, tom, marca, formato) e como derivar uma fórmula nova a partir do mecanismo. | Só com motivo escrito no BRIEF. |
 
-## Instalar
+## Instalar no Codex
 
-```bash
-git clone https://github.com/Felpborges/criador-de-carrosseis-simples.git ~/.claude/skills/criador-de-carrosseis-simples
+### Windows (PowerShell)
+
+```powershell
+git clone https://github.com/alexalmeida70/criador-de-carrosseis-simples.git "C:\Users\Alex\.codex\skills\criador-de-carrosseis-simples"
 ```
 
-Depois é só pedir um carrossel no Claude Code (ou chamar `/criador-de-carrosseis-simples`).
+### macOS/Linux
+
+```bash
+git clone https://github.com/alexalmeida70/criador-de-carrosseis-simples.git ~/.codex/skills/criador-de-carrosseis-simples
+```
+
+Abra um novo turno no Codex após a instalação. Depois, basta pedir um carrossel; o gatilho está descrito no `SKILL.md`.
+
+## Instalar no Claude Code
+
+```bash
+git clone https://github.com/alexalmeida70/criador-de-carrosseis-simples.git ~/.claude/skills/criador-de-carrosseis-simples
+```
+
+Depois é só pedir um carrossel no Claude Code (ou chamar `/criador-de-carrosseis-simples`). No Windows, use o caminho equivalente dentro de `%USERPROFILE%\.claude\skills\`.
+
+## Usar com ChatGPT
+
+O `SKILL.md`, as referências e os templates podem ser adicionados como conhecimento de um Projeto ou GPT. O ChatGPT sem terminal consegue produzir estratégia, copy, briefing e especificações; a renderização dos PNGs e MP4s exige um ambiente executor com Node, Python, Playwright e ffmpeg, como Codex ou Claude Code.
 
 ## Dependências
 
-- Node com Playwright (o `scripts/novo-projeto.py` liga o `node_modules` de um projeto que já tenha o Playwright; ajuste `PLAYWRIGHT_DIR` se precisar) e o Chrome sem janela do Playwright.
+- Node.js 20 ou superior.
+- Playwright local: `npm install playwright` e `npx playwright install chromium`. Como alternativa, `PLAYWRIGHT_DIR` pode apontar para um projeto que já tenha Playwright.
 - Python 3 com Pillow (folha de contato e teste de miniatura).
-- ffmpeg (só pro carrossel vivo).
+- ffmpeg no `PATH` (só pro carrossel vivo).
 - Fontes: Geist, Geist Mono e DM Serif Display (todas OFL) vêm junto em `assets/fonts/`.
 - Pro carrossel vivo: Python com numpy, scipy e Pillow; opencv-python só pro `fundo-limpo.py`.
 - Higgsfield (opcional) pra gerar a imagem da capa.
+
+No Windows, os exemplos com `python3` podem ser executados com `py -3` ou `python`.
 
 ## O que não está no repositório
 
@@ -46,13 +71,13 @@ assets/acervo/           os carrosséis aprovados do autor, indexados por posiç
 assets/exemplos/aprovado o carrossel de referência (folha, cenas, testes) que define "pronto"
 scripts/                 novo-projeto.py · render.mjs (stills, cues, frames, video) · folha.py (--lado) · folha-batidas.py · musica.py · baixar-ig.py (post, carrossel ou reel do Instagram → refs/, com os cookies do Chrome logado)
                          periciar.py (mede uma referência) · comparar-pericia.py · fontes.py (Google Fonts, Fontshare) · ocr.swift
-                         · testes-vivo.py · fundo-limpo.py · preview.py · vivo.sh · acervo.mjs
+                         · testes-vivo.py · fundo-limpo.py · preview.py · vivo.sh · vivo.ps1 · acervo.mjs
 evals/                   quatro casos de teste
 ```
 
 ## Carrossel vivo
 
-Depois do estático aprovado: storyboard na grade de 120 BPM, `seek(t)` em cada slide com os acertos declarados, e `zsh scripts/vivo.sh` faz o resto: beats → música sintetizada em numpy (uma só, a editorial: nesta versão não há escolha de estilo) (-14 LUFS, loop circular) → MP4 por slide (quadros direto no ffmpeg) → folhas por batida → testes (quadro 0 = PNG com diferença zero, último quadro = quadro 0, som na emenda) → preview.
+Depois do estático aprovado: storyboard na grade de 120 BPM, `seek(t)` em cada slide com os acertos declarados, e `zsh scripts/vivo.sh` no macOS/Linux ou `powershell -ExecutionPolicy Bypass -File scripts/vivo.ps1` no Windows faz o resto: beats → música sintetizada em numpy (uma só, a editorial: nesta versão não há escolha de estilo) (-14 LUFS, loop circular) → MP4 por slide (quadros direto no ffmpeg) → folhas por batida → testes (quadro 0 = PNG com diferença zero, último quadro = quadro 0, som na emenda) → preview.
 
 Rota: código puro. Sem HyperFrames, sem Remotion, sem Canva.
 
