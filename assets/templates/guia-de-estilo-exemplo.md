@@ -77,7 +77,7 @@ editorial. Nunca as duas famílias no mesmo peso visual.
      │   texto no layout    │   frase 3              │
 1052 ├──────────────────────┘                        │
 1096 │ [ barra laranja de veredito ]                 │
-1278 │ @handle         criador · fala ia             │  ← rodapé em mono
+1278 │ Grupo MR | Máquina de Resultados    [UNIDADE] │  ← assinatura institucional em mono
      └───────────────────────────────────────────────┘  ← zona do ícone de som: x>940, y>1210
 ```
 
@@ -88,7 +88,7 @@ editorial. Nunca as duas famílias no mesmo peso visual.
   Três frases curtas, separadas por dois fios de 3 px em tinta, 250 px de comprimento.
 - Barra: começa em x=72, a largura abraça o texto (como na referência, a barra é do tamanho
   da frase), 26 px de respiro em cima e embaixo, até duas linhas.
-- Rodapé: "@handle" em x=72 e "criador · fala ia" começando em x=676 (alinhado com a coluna
+- Assinatura institucional: "Grupo MR | Máquina de Resultados" em x=72 e a unidade escolhida começando em x=676 (alinhada com a coluna
   da direita), linha de base em y=1278. Assim fica à direita sem entrar no ícone de som.
 
 ### Capa e CTA

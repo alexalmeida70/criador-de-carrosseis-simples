@@ -84,8 +84,9 @@ def main():
     errors += validate_frontmatter(text)
     required_business_context = [
         "Grupo MR | Máquina de Resultados",
-        "Para qual unidade de negócio do Grupo MR | Máquina de Resultados este carrossel será criado?",
+        "Para qual unidade de negócio do Grupo MR | Máquina de Resultados este carrossel será criado: Consultores Associados, Marketing Digital ou Eventos?",
         "Nunca infira a unidade",
+        "Nunca omita, inverta, una ou exiba mais de uma unidade",
     ]
     for token in required_business_context:
         if token not in text:

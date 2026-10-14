@@ -8,7 +8,9 @@ Skill compatível com Codex, ChatGPT e Claude Code para criar carrosséis do Ins
 
 ## Arquitetura de marca desta adaptação
 
-O contexto institucional fixo é **Grupo MR | Máquina de Resultados**. Cada carrossel deve declarar a unidade de negócio à qual pertence; a skill pergunta isso no início de todo novo projeto quando a informação não estiver explícita no pedido. A unidade escolhida determina a marca, a conta, o público, o tom, a oferta e o CTA registrados em `MARCA.md` e `BRIEF.md`.
+O contexto institucional fixo é **Grupo MR | Máquina de Resultados**. Cada carrossel deve escolher exatamente uma unidade de negócio — **Consultores Associados**, **Marketing Digital** ou **Eventos** — e a skill pergunta isso no início de todo novo projeto quando a informação não estiver explícita no pedido. As unidades nunca são combinadas. A unidade escolhida determina a marca, a conta, o público, o tom, a oferta e o CTA registrados em `MARCA.md` e `BRIEF.md`.
+
+Em todos os slides, a assinatura padrão é `Grupo MR | Máquina de Resultados` no rodapé esquerdo e a unidade escolhida no rodapé direito. Quando a composição exigir outra posição, ambas continuam visíveis e separadas em um local conveniente.
 
 A gramática vem do estudo de 19 carrosséis e 17 reels do @growithalex (Alex, Creative Strategist) mais dois vídeos dele, organizada em três camadas:
 

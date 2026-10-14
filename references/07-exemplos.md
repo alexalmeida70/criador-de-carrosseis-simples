@@ -12,7 +12,7 @@ O projeto "a mesma capa, oito layouts" (out/2026) é o melhor resultado até ago
 
 ## Como usar o acervo antes de desenhar
 1. Pra cada slide que você vai desenhar, abra 3 a 6 exemplos da **mesma posição e do mesmo fundo** (`indice.md` → `todos/`). Olhe de verdade (Read na imagem).
-2. Tire **uma coisa de cada referência**: a escala da palavra gigante de uma, a grade do par de outra, o rodapé de outra. Seis referências, seis atributos, e ninguém rastreia (regra do Alex).
+2. Tire **uma coisa de cada referência**: a escala da palavra gigante de uma, a grade do par de outra, a linha editorial de prova de outra. A assinatura institucional Grupo MR + unidade nunca vem da referência. Seis referências, seis atributos, e ninguém rastreia (regra do Alex).
 3. Pegue a gramática (grade, escala, dispositivo, ritmo entre slides), nunca o conteúdo, a cena, o rosto nem o cabeçalho dele.
 4. A linha "ritmo" de cada post no índice mostra a alternância de fundos que ele usa; copie o princípio da alternância, não a sequência.
 

@@ -2,10 +2,11 @@
 
 ## 0. Contexto do negócio
 - **Grupo:** Grupo MR | Máquina de Resultados
-- **Unidade de negócio:** (obrigatória em todo novo projeto; não inferir)
+- **Unidade de negócio — escolha exatamente uma:** Consultores Associados / Marketing Digital / Eventos
 - **Marca, produto ou oferta:**
 - **Conta / @ de publicação:**
 - **Responsável / aprovador:**
+- **Assinatura visual:** esquerda `Grupo MR | Máquina de Resultados` · direita `[unidade escolhida]` · alternativa de posição, se necessária:
 
 ## 1. Estratégia
 - **Tema:** 
@@ -19,7 +20,7 @@
 
 ## 1b. Referência (só se veio uma)
 - **Veio como:** link / capturas / vídeo · guardada em `refs/` · perícia em `docs/pericia-x.md` · guia em `docs/guia-de-estilo.md`
-- **A referência manda no visual inteiro** (fixo nesta versão); o MARCA entra só com @, rodapé, elenco e tom
+- **A referência manda no visual inteiro** (fixo nesta versão); do MARCA permanecem grupo, unidade, conta, elenco e tom
 - **O que a pessoa disse sobre ela (palavra por palavra):**
 
 | O que | da referência | do MARCA | do padrão-base (variação com motivo) |
@@ -32,7 +33,7 @@
 | formas e dispositivos |  |  |  |
 | textura |  |  |  |
 | ritmo dos slides |  |  |  |
-| @, rodapé, elenco |  |  |  |
+| grupo, unidade, conta, assinatura e elenco |  |  |  |
 
 - **Mecanismos verificáveis (5 a 7, do guia):**
 
@@ -59,7 +60,7 @@ Teste de ordem: (quais slides do meio NÃO podem trocar e por quê)
 - Linha pequena: 
 - PALAVRA GIGANTE: 
 - Complemento: 
-- Rodapé (quantidade · unidade · prova): 
+- Linha editorial de prova, acima da assinatura institucional (quantidade · objeto · prova):
 
 ### S02 · hold
 - Tese: 

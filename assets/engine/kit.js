@@ -6,8 +6,16 @@
   Object.assign(K, { W, H, FPS, BEAT });
 
   // ---------- marca (o slide pode sobrescrever com K.marca({...}) antes de montar) ----------
-  K.MARCA = { handle: '@handle', rodapeDir: 'criador · fala ia', cabEsq: 'OUT ©2026', cabMeio: 'NOME', cabDir: 'TÍTULO' };
-  K.marca = (o) => Object.assign(K.MARCA, o || {});
+  const GRUPO = 'Grupo MR | Máquina de Resultados';
+  const UNIDADES = new Set(['Consultores Associados', 'Marketing Digital', 'Eventos']);
+  K.MARCA = { grupo: GRUPO, unidade: 'UNIDADE DE NEGÓCIO', cabEsq: 'OUT ©2026', cabMeio: 'NOME', cabDir: 'TÍTULO' };
+  K.marca = function (o) {
+    const dados = o || {};
+    if (dados.grupo != null && dados.grupo !== GRUPO) throw new Error(`Grupo inválido: use "${GRUPO}"`);
+    if (dados.unidade != null && !UNIDADES.has(dados.unidade)) throw new Error('Unidade inválida: use Consultores Associados, Marketing Digital ou Eventos');
+    Object.assign(K.MARCA, dados, { grupo: GRUPO });
+    return K.MARCA;
+  };
   // cores lidas dos tokens do kit.css (o MARCA.md muda o CSS, o JS acompanha)
   K.cor = (nome) => getComputedStyle(document.documentElement).getPropertyValue('--' + nome).trim();
   Object.defineProperty(K, 'CORES', { get: () => ({ PAPEL: K.cor('papel'), MARINHO: K.cor('marinho'), TINTA: K.cor('tinta'), LARANJA: K.cor('laranja'), CREME: K.cor('creme') }) });
@@ -105,9 +113,10 @@
   };
 
   // ---------- anatomia fixa ----------
-  K.rodape = function (q, cor, esq, dir) {
-    const a = K.el(q, 'div', 'rodape', esq || K.MARCA.handle);
-    const b = K.el(q, 'div', 'rodape', dir || K.MARCA.rodapeDir);
+  K.rodape = function (q, cor) {
+    if (!UNIDADES.has(K.MARCA.unidade)) throw new Error('Defina uma unidade válida em K.marca({ unidade: ... }) antes de montar o rodapé');
+    const a = K.el(q, 'div', 'rodape', K.MARCA.grupo);
+    const b = K.el(q, 'div', 'rodape', K.MARCA.unidade);
     K.place(a, { x: 72, base: 1278, color: cor });
     K.place(b, { x: 676, base: 1278, color: cor }); // alinhado com a coluna da direita, longe do ícone de som
     return [a, b];

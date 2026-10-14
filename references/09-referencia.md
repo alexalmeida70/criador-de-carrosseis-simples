@@ -2,7 +2,7 @@
 
 ## O princípio
 
-Sem referência, a skill entrega o padrão-base (a receita aprovada de `02-padrao-base.md` §1b) e isso já é um resultado bom. **Com referência, a referência manda em tudo que é visível**: fonte, cor, grade, espaçamento, quanto da tela é preenchida, como as imagens são feitas, formas, textura, ritmo. O padrão-base só preenche o que a referência não mostra (um slide de virada que ela não tem, um rodapé que ela não usa). As camadas 1 e 3 continuam mandando no que **não** é visível: estratégia, estrutura em seis posições, copy, legenda, CTA e a rubrica da crítica.
+Sem referência, a skill entrega o padrão-base (a receita aprovada de `02-padrao-base.md` §1b) e isso já é um resultado bom. **Com referência, a referência manda no sistema visual**: fonte, cor, grade, espaçamento, quanto da tela é preenchida, como as imagens são feitas, formas, textura, ritmo. A exceção obrigatória é a assinatura institucional Grupo MR + unidade, que permanece visível e separada. O padrão-base só preenche o que a referência não mostra (por exemplo, um slide de virada que ela não tem). As camadas 1 e 3 continuam mandando em estratégia, estrutura em seis posições, copy, legenda, CTA e rubrica da crítica.
 
 Pega-se a **gramática**. Nunca o conteúdo, as fotos, o nome, o @, os personagens, a legenda ou o copy.
 
@@ -13,7 +13,7 @@ A referência não é um "mood". É uma coisa que se mede. Por isso o caminho é
 | De onde | O quê |
 |---|---|
 | **da referência** | tudo que é visível: as 12 dimensões (fonte, cor, grade, espaçamento, preenchimento, hierarquia, imagens e como são feitas, formas, textura, ritmo, movimento) |
-| **do MARCA** | @, rodapé, elenco (o rosto é o nosso), idioma, tom |
+| **do MARCA** | Grupo MR, unidade escolhida, conta, assinatura institucional, elenco (o rosto é o nosso), idioma, tom |
 | **das camadas 1 e 3** | estratégia, estrutura em seis posições, copy, legenda, CTA, rubrica da crítica |
 
 Nesta versão não existe modo "no espírito" nem "só o dispositivo": veio referência, ela manda. Se a conta tem identidade no MARCA e a referência é de outro estilo, siga a referência e escreva no BRIEF: "a referência mandou no visual". Não pergunte "o que você quer da referência": a resposta é tudo.

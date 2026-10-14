@@ -1,11 +1,11 @@
 # MARCA.md · Grupo MR | Máquina de Resultados · documento da unidade de negócio
 
 > O grupo é fixo; a unidade de negócio é definida em cada novo projeto. Copie este arquivo pra pasta da unidade/conta e preencha. A skill lê este arquivo antes de escolher fonte, cor, elenco e tom. Campo em branco = a skill pergunta.
-> Quando o pedido traz uma **referência**, ela manda no visual (fontes, cores, grade, imagens, preenchimento); deste arquivo entram só o @, o rodapé, o elenco e o tom (`references/09-referencia.md`).
+> Quando o pedido traz uma **referência**, ela manda no visual (fontes, cores, grade, imagens, preenchimento); deste arquivo permanecem o grupo, a unidade, a conta, o elenco e o tom (`references/09-referencia.md`).
 
 ## Arquitetura de marca
 - **Grupo:** Grupo MR | Máquina de Resultados
-- **Unidade de negócio:** (obrigatória; não inferir)
+- **Unidade de negócio — marque exatamente uma:** [ ] Consultores Associados · [ ] Marketing Digital · [ ] Eventos
 - **Marca, produto ou oferta:**
 - **Responsável pela unidade:**
 
@@ -43,7 +43,7 @@
 
 ## Anatomia fixa
 - Cabeçalho dos slides internos (esq · centro · dir): 
-- Rodapé dos slides internos: 
+- Rodapé dos slides internos: esquerda `Grupo MR | Máquina de Resultados` · direita `[unidade escolhida]`. Se essas posições não couberem, manter as duas assinaturas separadas em outro local legível e conveniente.
 - Slide final: cantos superiores, texto do "precisa estar seguindo", cena.
 
 ## Proibições específicas desta marca
@@ -54,7 +54,7 @@
 ## Exemplo preenchido do projeto original: Fala IA · aprovado em out/2026. Troque pelos dados da unidade e da conta
 - **Grupo:** exemplo externo ao Grupo MR; não reutilizar como unidade de negócio.
 - **Unidade de negócio:** Fala IA (exemplo original).
-- **@:** `@felipeborgesfalaia` (provisório, confirmar). Não entra na arte, só no rodapé em mono: `@felipeborgesfalaia` à esquerda · `criador · fala ia` à direita.
+- **@:** `@felipeborgesfalaia` (provisório, confirmar). No projeto original, entrava no rodapé; nesta adaptação, o rodapé institucional usa Grupo MR + unidade e o @ só entra em outro local se o projeto pedir.
 - **Cabeçalho da capa:** `FALA IA · [recibo]` (o número real de inscritos ou de curtidas, a confirmar). Internos: mês/ano · FELIPE BORGES · CRIADOR · FALA IA.
 - **Tom:** direto/criador. Ensina a criar conteúdo com Claude Code e IA, em PT-BR.
 - **Visual: o padrão-base aprovado** (`02-padrao-base.md` §1b): Geist 800 (nomes, números, lockups) + DM Serif Display itálica (a palavra-assinatura) + Geist Mono (rodapé); papel `#EDE9E1` com linho, marinho `#181D26`, tinta `#15130F`, laranja `#F2511F`, creme `#FBF4E8`. Capa e CTA fotográficos; internos alternando papel e marinho com os escuros em posições irregulares.

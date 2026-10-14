@@ -30,7 +30,7 @@ Gere em 1K ou 2K (upscale depois). Duas variações por cena; escolha a limpa (s
 Em qualquer rota: duas variações por cena, folha de contato das escolhidas em `assets/`, versão com fundo removido quando a pessoa vai ser animada em camadas (`higgsfield-generate` remove fundo por 1 crédito). Custos de referência (out/2026): GPT Image 2.5 high 2k ≈ 2,75 créditos; Nano Banana Pro 2k ≈ 2; remover fundo 1.
 
 ## Sem Higgsfield (ou sem créditos)
-Capa tipográfica: cor chapada de papel ou escuro texturizado (o motor desenha grão com semente), uma palavra gigante, o trio do rodapé, um elemento gráfico só (uma linha, um círculo, uma etiqueta). Funciona pra listicle e pra tom institucional. Não funciona pra "mundo": aí a capa precisa de imagem.
+Capa tipográfica: cor chapada de papel ou escuro texturizado (o motor desenha grão com semente), uma palavra gigante, a linha editorial de prova acima da assinatura institucional e um elemento gráfico só (uma linha, um círculo, uma etiqueta). Funciona pra listicle e pra tom institucional. Não funciona pra "mundo": aí a capa precisa de imagem.
 
 ## As cenas (quando há elenco): os três briefs que funcionaram
 No projeto aprovado "a mesma capa, oito layouts" as fotos foram geradas no Higgsfield pela rota **foto de referência** (quatro fotos da pessoa em `assets/identidade/` do projeto: frontal, perfil, três quartos, corpo). Luz de fim de tarde, quente, cinematográfica, 4:5 ou maior, duas variações por cena. O molde de cada cena:

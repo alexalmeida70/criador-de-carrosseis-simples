@@ -29,7 +29,7 @@ Cada fórmula vem em quatro partes: **mecanismo** (por que funciona; isso é inv
 
 ## 1. Capa (open)
 
-**Mecanismo:** criar um querer em meio segundo, em miniatura. Título de 2 a 4 palavras, uma delas gigante que lê como forma. Rodapé em trio: quantidade · unidade · prova.
+**Mecanismo:** criar um querer em meio segundo, em miniatura. Título de 2 a 4 palavras, uma delas gigante que lê como forma. Linha editorial de prova acima da assinatura institucional: quantidade · objeto · prova.
 
 **Forma-base (por frequência no Alex):**
 1. "rouba meu [coisa]" (7 de 19): possessivo + convite ao roubo. Promete que é dele e já funcionou.
@@ -38,11 +38,11 @@ Cada fórmula vem em quatro partes: **mecanismo** (por que funciona; isso é inv
 4. Binário: "barato × caro". A comparação já é a promessa.
 5. Superlativo utilitário: "os melhores pares de fontes". O viral foi o título mais simples da amostra.
 6. Ferramenta + mapa: "Fable 5 pra social: qual Claude faz o quê".
-Rodapé: "6 dispositivos. Um quadro. Todo post que funcionou." / "5 regras. Uma imagem. 97 mil curtidas." / "4 posts · 1 ideia · 12 mil saves".
+Linha editorial de prova: "6 dispositivos. Um quadro. Todo post que funcionou." / "5 regras. Uma imagem. 97 mil curtidas." / "4 posts · 1 ideia · 12 mil saves". Ela não substitui a assinatura Grupo MR + unidade.
 
 **Quando trocar:** "rouba meu" não serve pra marca que não é uma pessoa, pra tom premium nem pra público que não produz conteúdo. Superlativo não serve sem prova. Binário exige um par visual real.
 
-**Como variar:** o mecanismo é a promessa de algo que já existe e tem dono. Alternativas: "o que eu mudei em [coisa] e deu [número]" (recibo), "[coisa] em [número] decisões" (mapa), "[palavra comum] não é [o que você pensa]" (redefinição), uma palavra só + a prova no rodapé (punch). Pra listicle: "[número] [coisas] que [resultado concreto]".
+**Como variar:** o mecanismo é a promessa de algo que já existe e tem dono. Alternativas: "o que eu mudei em [coisa] e deu [número]" (recibo), "[coisa] em [número] decisões" (mapa), "[palavra comum] não é [o que você pensa]" (redefinição), uma palavra só + a linha editorial de prova (punch). Pra listicle: "[número] [coisas] que [resultado concreto]".
 
 ## 2. Slide 2 (hold)
 
