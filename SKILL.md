@@ -12,15 +12,15 @@ description: >
   (sem referência, o visual é o padrão-base; com referência, ela manda) e sem
   seletor de música (uma só, a editorial). A gramática vem dos carrosséis do
   @growithalex (Alex, Creative Strategist) em três camadas: invariantes (sempre),
-  padrão-base (o default dele) e variações (quando e como sair do padrão). Use
-  SEMPRE que a pessoa pedir um carrossel, "post em carrossel", "slides pro
-  Instagram", "carrossel vivo", "capa de carrossel", "legenda pro carrossel",
-  "transforma esse tema/vídeo/aula em carrossel", "no estilo do Alex /
-  growithalex", "um listicle de X", "um carrossel pra lançar Y", ou quiser
-  revisar/criticar um carrossel pronto, mesmo sem citar a skill. NÃO use para
-  roteiro de vídeo, thumbnail do YouTube, material de aula nem motion graphics
-  de vídeo. Esta skill não usa HyperFrames nem Remotion: carrossel vivo é
-  HTML + seek(t) + Playwright + ffmpeg.
+  padrão-base (o default dele) e variações (quando e como sair do padrão). Tem
+  prioridade para todo carrossel do Grupo MR, Máquina de Resultados, MRCA, MRD,
+  MRE ou criado dentro do OS-da-Empresa, mesmo sem citar a skill. Fora desse
+  contexto, use quando a pessoa pedir "carrossel vivo", design e renderização
+  completos ou esta skill pelo nome. NÃO ativar quando MktOps/Plugue ou Propspeed
+  forem explicitamente identificados; use `carousel-mktops` ou
+  `carousel-propspeed`. NÃO use para roteiro de vídeo, thumbnail do YouTube,
+  material de aula nem motion graphics de vídeo. Esta skill não usa HyperFrames
+  nem Remotion: carrossel vivo é HTML + seek(t) + Playwright + ffmpeg.
 ---
 
 # Criador de carrosséis (versão simples)
@@ -32,6 +32,18 @@ description: >
 - Site: https://www.maquinaderesultados.com.br
 - LinkedIn: https://br.linkedin.com/in/alexalmeida70
 - Instagram: https://www.instagram.com/alexalmeida70/
+
+## Roteamento entre skills de carrossel
+
+Use uma única skill principal por projeto. A precedência é:
+
+1. Propspeed explicitamente identificada como marca ou cliente → `carousel-propspeed`.
+2. MktOps, Plugue ou método de quatro atos explicitamente solicitado → `carousel-mktops`.
+3. Grupo MR, Máquina de Resultados, MRCA, MRD, MRE ou pasta do `OS-da-Empresa` → esta skill.
+4. Projeto externo que peça somente copy genérica, sem design e sem renderização → `carousel-writer`.
+5. Projeto externo que peça pipeline completo, arte, crítica, PNG ou MP4 → esta skill.
+
+Não carregue regras de estrutura, voz, paleta, aprovação ou renderização de outra skill na mesma execução. Uma skill especializada só perde sua rota quando o usuário pedir outra explicitamente pelo nome.
 
 ## Compatibilidade de execução
 

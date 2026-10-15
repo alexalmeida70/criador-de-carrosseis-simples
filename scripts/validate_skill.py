@@ -19,6 +19,7 @@ AUTHORSHIP = """## Autoria
 REQUIRED = [
     "SKILL.md",
     "README.md",
+    "docs/ROTEAMENTO-DE-SKILLS.md",
     "assets/engine/kit.js",
     "assets/templates/BRIEF.md",
     "assets/templates/PROJECT-RULES.md",
@@ -92,6 +93,9 @@ def main():
     for token in required_business_context:
         if token not in text:
             errors += fail(f"regra de unidade de negócio ausente no SKILL.md: {token}")
+    for token in ["carousel-writer", "carousel-mktops", "carousel-propspeed", "Roteamento entre skills"]:
+        if token not in text:
+            errors += fail(f"regra de roteamento ausente no SKILL.md: {token}")
     novo_projeto = (ROOT / "scripts" / "novo-projeto.py").read_text(encoding="utf-8")
     for token in ["--unidade", "'MRCA'", "'MRD'", "'MRE'", "projeto.json", "PROJECT-RULES.md"]:
         if token not in novo_projeto:

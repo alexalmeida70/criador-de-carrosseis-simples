@@ -56,6 +56,8 @@ python scripts/novo-projeto.py "CAMINHO_DO_PROJETO" --unidade MRCA --marca "CAMI
 
 IDs oficiais: `MRCA` (Consultores Associados), `MRD` (Marketing Digital) e `MRE` (Eventos). O gerador grava a unidade em `projeto.json`, preenche o rodapé dos templates e cria `AGENTS.md` e `CLAUDE.md` dentro do projeto.
 
+O roteamento entre esta skill, `carousel-writer`, `carousel-mktops` e `carousel-propspeed` está documentado em [`docs/ROTEAMENTO-DE-SKILLS.md`](docs/ROTEAMENTO-DE-SKILLS.md). Cada projeto usa exatamente uma skill principal.
+
 ## Dependências
 
 - Node.js 20 ou superior.
