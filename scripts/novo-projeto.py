@@ -109,4 +109,4 @@ print('projeto criado em', dest)
 print('unidade:', a.unidade, '·', unidade['nome'])
 python_cmd = 'py -3' if os.name == 'nt' else 'python3'
 vivo_cmd = 'powershell -ExecutionPolicy Bypass -File scripts/vivo.ps1' if os.name == 'nt' else 'zsh scripts/vivo.sh'
-print(f'fluxo: MARCA.md + BRIEF.md → (fotos em assets/) → src/slides/slide-NN.html → node scripts/render.mjs stills → {python_cmd} scripts/folha.py → {python_cmd} scripts/preview.py → [OK] → {vivo_cmd}')
+print(f'fluxo: MARCA.md + BRIEF.md -> (fotos em assets/) -> src/slides/slide-NN.html -> node scripts/render.mjs stills -> {python_cmd} scripts/folha.py -> {python_cmd} scripts/preview.py -> [OK] -> {vivo_cmd}')
