@@ -21,6 +21,7 @@ REQUIRED = [
     "README.md",
     "assets/engine/kit.js",
     "assets/templates/BRIEF.md",
+    "assets/templates/PROJECT-RULES.md",
     "references/01-invariantes.md",
     "references/10-atlas-de-fontes.md",
     "scripts/novo-projeto.py",
@@ -91,6 +92,10 @@ def main():
     for token in required_business_context:
         if token not in text:
             errors += fail(f"regra de unidade de negócio ausente no SKILL.md: {token}")
+    novo_projeto = (ROOT / "scripts" / "novo-projeto.py").read_text(encoding="utf-8")
+    for token in ["--unidade", "'MRCA'", "'MRD'", "'MRE'", "projeto.json", "PROJECT-RULES.md"]:
+        if token not in novo_projeto:
+            errors += fail(f"integração por unidade ausente em novo-projeto.py: {token}")
     for relative in REQUIRED:
         if not (ROOT / relative).exists():
             errors += fail(f"arquivo obrigatório ausente: {relative}")

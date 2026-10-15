@@ -2,7 +2,7 @@
 
 ## 0. Contexto do negócio
 - **Grupo:** Grupo MR | Máquina de Resultados
-- **Unidade de negócio — escolha exatamente uma:** Consultores Associados / Marketing Digital / Eventos
+- **Unidade de negócio:** {{UNIDADE_NOME}} (`{{UNIDADE_ID}}`) · rodapé: `{{UNIDADE_ROTULO}}`
 - **Marca, produto ou oferta:**
 - **Conta / @ de publicação:**
 - **Responsável / aprovador:**

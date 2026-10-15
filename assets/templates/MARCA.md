@@ -5,7 +5,7 @@
 
 ## Arquitetura de marca
 - **Grupo:** Grupo MR | Máquina de Resultados
-- **Unidade de negócio — marque exatamente uma:** [ ] Consultores Associados · [ ] Marketing Digital · [ ] Eventos
+- **Unidade de negócio:** {{UNIDADE_NOME}} (`{{UNIDADE_ID}}`) · rodapé: `{{UNIDADE_ROTULO}}`
 - **Marca, produto ou oferta:**
 - **Responsável pela unidade:**
 

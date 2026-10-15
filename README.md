@@ -48,6 +48,14 @@ Depois é só pedir um carrossel no Claude Code (ou chamar `/criador-de-carrosse
 
 O `SKILL.md`, as referências e os templates podem ser adicionados como conhecimento de um Projeto ou GPT. O ChatGPT sem terminal consegue produzir estratégia, copy, briefing e especificações; a renderização dos PNGs e MP4s exige um ambiente executor com Node, Python, Playwright e ffmpeg, como Codex ou Claude Code.
 
+## Criar um projeto por unidade
+
+```powershell
+python scripts/novo-projeto.py "CAMINHO_DO_PROJETO" --unidade MRCA --marca "CAMINHO_DO_MARCA.md"
+```
+
+IDs oficiais: `MRCA` (Consultores Associados), `MRD` (Marketing Digital) e `MRE` (Eventos). O gerador grava a unidade em `projeto.json`, preenche o rodapé dos templates e cria `AGENTS.md` e `CLAUDE.md` dentro do projeto.
+
 ## Dependências
 
 - Node.js 20 ou superior.
