@@ -86,12 +86,17 @@ with open(os.path.join(dest, 'projeto.json'), 'w', encoding='utf-8') as f:
 pw = os.environ.get('PLAYWRIGHT_DIR')
 nm = os.path.join(pw, 'node_modules') if pw else None
 if nm and os.path.isdir(os.path.join(nm, 'playwright')):
-    try:
-        os.symlink(nm, os.path.join(dest, 'node_modules'), target_is_directory=True)
-        print('playwright ligado a', nm)
-    except OSError as exc:
-        print('aviso: não foi possível criar o link de node_modules:', exc)
-        print('rode na pasta do projeto: npm install playwright && npx playwright install chromium')
+    if os.name == 'nt':
+        # O render.mjs carrega diretamente de PLAYWRIGHT_DIR. Evite symlink no
+        # Windows, pois ele exige privilégio adicional mesmo no perfil local.
+        print('playwright compartilhado em', pw)
+    else:
+        try:
+            os.symlink(nm, os.path.join(dest, 'node_modules'), target_is_directory=True)
+            print('playwright ligado a', nm)
+        except OSError as exc:
+            print('aviso: não foi possível criar o link de node_modules:', exc)
+            print('o render usará PLAYWRIGHT_DIR:', pw)
 else:
     print('aviso: playwright local ainda não instalado')
     print('rode na pasta do projeto: npm install playwright && npx playwright install chromium')
